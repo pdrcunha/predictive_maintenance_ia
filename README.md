@@ -1,65 +1,70 @@
-# 🔧 Manutenção Preditiva: Pipeline de Dados com Python
+# 🔧 Manutenção Preditiva: Análise Exploratória de Dados com Python
 
-Este projeto demonstra um pipeline completo de engenharia e ciência de dados aplicado a um cenário de **manutenção preditiva industrial**, utilizando o dataset público **[Machine Predictive Maintenance - Classification](https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification)**.
+Este projeto demonstra um pipeline básico de **tratamento e análise exploratória de dados (EDA)** aplicado a um cenário de **manutenção preditiva industrial**, utilizando o dataset público **[Machine Predictive Maintenance - Classification](https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification)**.
 
----
+----------
 
 ## 🎯 Objetivo
 
 Construir uma solução que:
 
-1. 📥 **Carrega dados brutos** de sensores e registros de falhas (planilha CSV)
-2. 🧼 **Realiza limpeza, normalização e enriquecimento** dos dados com Python
-3. 🧠 **Treina um modelo simples de machine learning** para prever falhas
-4. 📊 **Gera gráficos e visualizações empresariais** (dashboards locais)
-5. 🛢️ **Salva os dados processados em um banco relacional** (opcional)
+1.  📥 **Carrega os dados brutos** de sensores e registros de falhas (arquivo CSV)
+    
+2.  🧼 **Realiza tratamento e limpeza dos dados** com Python
+    
+3.  📊 **Gera gráficos com matplotlib** para análise e descoberta de padrões
+    
 
----
+----------
 
 ## 📂 Etapas do Pipeline
 
-- **Leitura e ingestão de dados (ETL básico)**  
-  - CSV → pandas
-  - Limpeza de nulos, tipos e inconsistências
-  - Conversão de tipos, padronização
+-   **Leitura e tratamento dos dados**
+    
+    -   Carregamento do CSV com pandas
+        
+    -   Conversão de tipos e limpeza de dados nulos ou inconsistentes
+        
+-   **Análise exploratória (EDA)**
+    
+    -   Distribuição de variáveis numéricas e categóricas
+        
+    -   Relações bivariadas (ex: Torque vs Rotational Speed)
+        
+    -   Correlações entre variáveis
+        
+    -   Visualização de outliers
+        
+-   **Visualização**
+    
+    -   Gráficos com `matplotlib` para interpretação de padrões e relações
+        
+    -   Análises com suporte estatístico (ex: correlação de Pearson)
+        
 
-- **Análise exploratória (EDA)**  
-  - Distribuições, correlações, padrões
-
-- **Visualização de insights**
-  - Gráficos com `matplotlib`
-
-- **Modelagem preditiva simples**
-  - Regressão logística ou Random Forest
-  - Avaliação com matriz de confusão e f1-score
-
-- **Exportação de dados processados**
-  - CSV limpo
-  - Opcional: inserção no PostgreSQL ou SQLite
-
----
+----------
 
 ## 🛠️ Tecnologias e Bibliotecas
 
-- Python 3.10+
-- pandas
-- numpy
-- matplotlib
-- scikit-learn (pip install -U scikit-learn) pois e uma lib compilada e não estou usando o conda
-- joblib
-- jupyter
-- psycopg2 (para banco de dados)
-- libpq-dev (apt install libpq-dev)
+-   Python 3.10+
+    
+-   pandas
+    
+-   numpy
+    
+-   matplotlib
+    
+-   jupyter (opcional para visualização interativa)
+    
 
+----------
 
----
+## 📈 Exemplos de Análises
 
-## 📈 Exemplos de Visualizações
-
-- Frequência de falhas por tipo de máquina  
-- Correlação entre sensores e falha  
-- Importância das variáveis  
-- Matriz de confusão do modelo preditivo  
-
----
-
+-   **Torque vs Velocidade de Rotação**: gráfico de dispersão e correlação
+    
+-   **Distribuição de Torque por Tipo de Produto**: boxplot
+    
+-   **Correlação entre sensores e falhas**
+    
+-   **Contagem de tipos de produto ou falha**
